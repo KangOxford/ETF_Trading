@@ -52,3 +52,12 @@ print("股票申购开销：%.2f"%amount_limit)
 print("现金替代开销：%.2f"%amount_paid)
 print("总开销:      %.2f"%(amount_limit+amount_paid))
 # 计算最小开销
+
+
+
+
+
+
+
+
+
