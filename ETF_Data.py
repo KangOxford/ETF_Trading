@@ -36,8 +36,8 @@ class ETF_Data:
         df2 = pd.DataFrame(datalist2)
         return df1,df2
 
-etf_code = "5100100429"
-etf_data = ETF_Data(etf_code)
+# etf_code = "5100100429"
+# etf_data = ETF_Data(etf_code)
 
 
     
