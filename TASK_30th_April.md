@@ -41,4 +41,4 @@
 
    
 
-![image-20200430140525618](ETF_Trading\static_markdown\image-20200430140525618.png)
+![image-20200430140525618](\ETF_Trading\static_markdown\image-20200430140525618.png)
