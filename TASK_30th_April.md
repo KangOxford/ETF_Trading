@@ -40,5 +40,5 @@
    |   单边   |     相对强弱，只增单边，T+0趋势     |
 
    
-
-![image-20200430140525618](https://github.com/FinTechNJU/ETF_Trading/static_markdown/image-20200430140525618.png)
+//: ![image-20200430140525618](https://github.com/FinTechNJU/ETF_Trading/static_markdown/image-20200430140525618.png)
+![image-20200430140525618](https://github.com/FinTechNJU/ETF_Trading/blob/master/static_markdown/image-20200430140525618.png)
