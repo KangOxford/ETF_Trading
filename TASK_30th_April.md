@@ -41,4 +41,10 @@
 
    
 [^_^]: ![image-20200430140525618](https://github.com/FinTechNJU/ETF_Trading/static_markdown/image-20200430140525618.png)
-![image-20200430140525618](https://github.com/FinTechNJU/ETF_Trading/blob/master/static_markdown/image-20200430140525618.png)
+[^_^]: ![image-20200430140525618](https://github.com/FinTechNJU/ETF_Trading/blob/master/static_markdown/image-20200430140525618.png)
+
+![image-20200430140525618](/static_markdown/image-20200430140525618.png)
+
+
+
+
