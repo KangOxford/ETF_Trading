@@ -41,3 +41,4 @@
 
    
 
+![image-20200430140525618](C:\Users\hs101\Desktop\ETF_Trading\static_markdown\image-20200430140525618.png)
