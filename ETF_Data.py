@@ -10,14 +10,9 @@ import pandas as pd
 #import os
 
 class ETF_Data:
-    def __init__(self,code):
-        self.etf_code = code
-        self.dataRaw = self.get_dataRaw()
+    def __init__(self,dataRaw):
+        self.dataRaw = dataRaw
         self.ETF_constitution, self.ETF_PR_list = self.process_dataRaw()
-    
-    def get_dataRaw(self):
-        dataRaw = pd.read_csv(self.etf_code+".ETF", sep='\n', encoding = 'gb2312')
-        return dataRaw
     
     def process_dataRaw(self):
         data1 = self.dataRaw[13:-1]
@@ -36,8 +31,9 @@ class ETF_Data:
         df2 = pd.DataFrame(datalist2)
         return df1,df2
 
-# etf_code = "5100100429"
-# etf_data = ETF_Data(etf_code)
+#etf_code = "5100100429"
+#etf_code = "510011"
+#etf_data = ETF_Data(etf_code)
 
 
     
