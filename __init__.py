@@ -10,15 +10,15 @@ from ETF_Crawler import *
 from ETF_Data import *
 
 
-#if __name__=="__main__":
-#    info_list = []
-#    for i in range(1,11):
-#        etf_crawler = ETF_Crawler(i)
-#        etf_data = ETF_Data(etf_crawler.dataRaw)
-#        etf_data_df1, etf_data_df2 = etf_data.process_dataRaw()
-#        info_list.append([etf_data_df1, etf_data_df2])
+if __name__=="__main__":
+    info_list_ETF_PR_list = []
+    info_list_ETF_constitution = []
+    for i in range(1,20):
+        etf_crawler = ETF_Crawler(i)
+        etf_data = ETF_Data(etf_crawler.dataRaw)
+        etf_data_df1, etf_data_df2 = etf_data.ETF_PR_list, etf_data.ETF_constitution
+        info_list_ETF_PR_list.append(etf_data.ETF_PR_list)
+        info_list_ETF_constitution.append(etf_data.ETF_constitution)
 
-i = 1
-etf_crawler = ETF_Crawler(i)
-temp = etf_crawler.get_dataRaw()
-etf_data = ETF_Data(etf_crawler.dataRaw)
+# 第20个解码有问题，明早起来继续做
+# 'gb2312' codec can't decode byte 0xbb in position 61: illegal multibyte sequence
