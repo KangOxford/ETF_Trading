@@ -1,0 +1,20 @@
+[ETF]
+Fundid1=511281
+CreationRedemptionUnit=10000
+MaxCashRatio=1.00000
+Publish=1
+CreationRedemption=1
+Recordnum=5
+EstimateCashComponent=5903.89
+TradingDay=20200430
+PreTradingDay=20200429
+CashComponent=5955.69
+NAVperCU=1120787.89
+NAV=112.0788
+TAGTAG
+143299|17兵装08|     160|2|       |  174624.000|
+143360|17川发01|     120|2|       |  133560.000|
+155618|19东航01|     120|2|       |  126036.000|
+155715|19建银06|     120|2|       |  127020.000|
+163228|20渝水01|     546|2|       |  553644.000|
+ENDENDEND

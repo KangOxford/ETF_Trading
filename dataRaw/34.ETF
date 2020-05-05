@@ -1,19 +1,19 @@
-[ETF]
-Fundid1=511011
-CreationRedemptionUnit=10000
-MaxCashRatio=1.00000
-Publish=1
-CreationRedemption=1
-Recordnum=4
-EstimateCashComponent=-631.09
-TradingDay=20200430
-PreTradingDay=20200429
-CashComponent=-531.53
-NAVperCU=1260411.06
-NAV=126.0410
-TAGTAG
-019575|17国债20|     208|1|0.07827|            |
-019587|18国债05|     185|1|0.06678|            |
-019623|19国债13|     653|1|0.05222|            |
-019631|20国债05|     128|1|0.04100|            |
-ENDENDEND
+[ETF]
+Fundid1=511011
+CreationRedemptionUnit=10000
+MaxCashRatio=1.00000
+Publish=1
+CreationRedemption=1
+Recordnum=4
+EstimateCashComponent=-631.09
+TradingDay=20200430
+PreTradingDay=20200429
+CashComponent=-531.53
+NAVperCU=1260411.06
+NAV=126.0410
+TAGTAG
+019575|17国债20|     208|1|0.07827|            |
+019587|18国债05|     185|1|0.06678|            |
+019623|19国债13|     653|1|0.05222|            |
+019631|20国债05|     128|1|0.04100|            |
+ENDENDEND

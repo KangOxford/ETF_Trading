@@ -1,16 +1,16 @@
-[ETF]
-Fundid1=511881
-CreationRedemptionUnit=10
-MaxCashRatio=1.00000
-Publish=0
-CreationRedemption=1
-Recordnum=1
-EstimateCashComponent=1.21
-TradingDay=20200430
-PreTradingDay=20200429
-CashComponent=0.04
-NAVperCU=1008.47
-NAV=100.847
-TAGTAG
-YHXJTD|申赎现金|      10|6|       |    1008.470|
-ENDENDEND
+[ETF]
+Fundid1=511881
+CreationRedemptionUnit=10
+MaxCashRatio=1.00000
+Publish=0
+CreationRedemption=1
+Recordnum=1
+EstimateCashComponent=1.21
+TradingDay=20200430
+PreTradingDay=20200429
+CashComponent=0.04
+NAVperCU=1008.47
+NAV=100.847
+TAGTAG
+YHXJTD|申赎现金|      10|6|       |    1008.470|
+ENDENDEND

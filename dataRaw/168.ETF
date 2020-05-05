@@ -1,0 +1,18 @@
+[ETF]
+Fundid1=511021
+CreationRedemptionUnit=30000
+MaxCashRatio=1.00000
+Publish=0
+CreationRedemption=1
+Recordnum=3
+EstimateCashComponent=3042.74
+TradingDay=20200430
+PreTradingDay=20200429
+CashComponent=3302.25
+NAVperCU=3239132.15
+NAV=107.9711
+TAGTAG
+019616|19¹úÕ®06|    1000|1|0.04592|            |
+019617|19¹úÕ®07|    1000|1|0.11240|            |
+019623|19¹úÕ®13|    1000|1|0.05222|            |
+ENDENDEND
