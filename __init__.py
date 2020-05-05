@@ -13,7 +13,7 @@ from ETF_Data import *
 if __name__=="__main__":
     info_list_ETF_PR_list = []
     info_list_ETF_constitution = []
-    for i in range(1,20):
+    for i in range(20,204):
         etf_crawler = ETF_Crawler(i)
         etf_data = ETF_Data(etf_crawler.dataRaw)
         etf_data_df1, etf_data_df2 = etf_data.ETF_PR_list, etf_data.ETF_constitution
