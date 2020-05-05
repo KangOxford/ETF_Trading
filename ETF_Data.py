@@ -33,12 +33,11 @@ class ETF_Data:
                 data2 = self.dataRaw[:11]
                 df = pd.DataFrame([list(self.dataRaw.columns)[0]], columns = [list(self.dataRaw.columns)[0]])
                 data2 = df.append(data2, ignore_index = True)
-                print(">>>NO: %d ... Type: 1"%self.num_code)
+                print(">>> NO: %d ... Type: 1"%self.num_code)
             else:
                 data1 = self.dataRaw[13:-1]
-                data2 = self.dataRaw[:12]
-                
-                print(">>>NO: %d ... Type: 2"%self.num_code)
+                data2 = self.dataRaw[:12                
+                print(">>> NO: %d ... Type: 2"%self.num_code)
 
             data1_split_series = data1.ix[:,0].str.split("|")
             data1_split_series = data1_split_series.reindex(range(len(data1_split_series)),method='bfill')

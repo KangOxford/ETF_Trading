@@ -31,6 +31,9 @@ class ETF_Crawler:
         name = str(self.num_code) + '.ETF'
         with open('./dataRaw/' + name, 'w+', encoding = 'gb2312') as file:
             file.write(self.html)
+    # 这里需要优化成：
+    # 一天内只读取一次数据，
+    # 接下来的分析都在已经存在的文件上操作
 
     def get_dataRaw(self):
         dataRaw = pd.read_csv('./dataRaw/'+str(self.num_code)+".ETF", sep='\n', encoding = 'gb2312')
