@@ -18,8 +18,8 @@ class ETF_recognition:
     Attributes：
         tradeDate: str, 交易日期
         consTicker: list, 成分券信息
-        consPrice: dict{str: Series}, 成分券价格
-        consMaxUpOrDown: dict{str: int}, 涨跌停       
+        consPrice: dict <- float, 成分券价格
+        consMaxUpOrDown: dict <- int, 涨跌停       
     '''
     
     def __init__(self, consTicker, tradeDate):
@@ -53,10 +53,9 @@ class ETF_recognition:
         for i in range(len(self.consTicker)):
             Ticker = str(self.consTicker.values[i])
             tempPreClosePrice = self.get_sigle_stock_price(Ticker, beginDate, endDate)
-#            tempPreClosePrice = float(tempPreClosePrice)
-            self.consPrice[Ticker] = tempPreClosePrice # self.consPrice: dict{str: Series}
-            print("NO. %d, Ticker = %s"%(i,Ticker))
-        print("get_consPrice ...... Done!")
+            tempPreClosePrice = float(tempPreClosePrice)
+            self.consPrice[Ticker] = tempPreClosePrice
+            print("NO. %d, Ticker = %s, PreClosePrice = %f"%(i,Ticker, tempPreClosePrice))
     
     def get_cons_maxUpOrDown(self, beginDate, endDate):
         '''利用wind获得列表中每个股票在特定日期的涨跌停情况
@@ -73,10 +72,9 @@ class ETF_recognition:
             for i in range(length):
                 Ticker = str(self.consTicker.values[i])
                 wind = w.wsd(Ticker + exchange, "maxupordown", beginDate, endDate, usedf = True)
-                maxUpOrDown = wind[1]
+                maxUpOrDown = wind[1].iat[0,0]
                 self.consMaxUpOrDown[Ticker] = maxUpOrDown
-                print("NO. %d, Ticker = %s"%(i,Ticker))
-            print("get_cons_maxUpOrDown ...... Done!")
+                print("NO. %d, Ticker = %s, MaxUpOrDown = %d"%(i,Ticker, int(maxUpOrDown)))
         else:
             print("Wind Starting Error!")
 #        w.stop()
