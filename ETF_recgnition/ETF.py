@@ -28,9 +28,13 @@ class ETF_recognition:
         
         self.consPrice = {}
         self.consMaxUpOrDown = {}
+        self.consTurn = {}
+        self.consSwing = {}
         
         self.get_consPrice(self.tradeDate, self.tradeDate)
         self.get_cons_maxUpOrDown(self.tradeDate, self.tradeDate)
+        self.get_cons_turn(self, self.tradeDate, self.tradeDate)
+        self.get_cons_swing(self, self.tradeDate, self.tradeDate)
         
     def get_sigle_stock_price(self, stock_code, beginDate, endDate):
         '''
@@ -55,9 +59,11 @@ class ETF_recognition:
             tempPreClosePrice = self.get_sigle_stock_price(Ticker, beginDate, endDate)
 #            tempPreClosePrice = float(tempPreClosePrice)
             self.consPrice[Ticker] = tempPreClosePrice # self.consPrice: dict{str: Series}
-            print("NO. %d, Ticker = %s"%(i,Ticker))
+#            print("NO. %d, Ticker = %s"%(i,Ticker))
+            print(" %.2d "%i, sep=">", end = '')       
         print("get_consPrice ...... Done!")
-    
+        print("\n")
+        
     def get_cons_maxUpOrDown(self, beginDate, endDate):
         '''利用wind获得列表中每个股票在特定日期的涨跌停情况
         Args:
@@ -75,12 +81,65 @@ class ETF_recognition:
                 wind = w.wsd(Ticker + exchange, "maxupordown", beginDate, endDate, usedf = True)
                 maxUpOrDown = wind[1]
                 self.consMaxUpOrDown[Ticker] = maxUpOrDown
-                print("NO. %d, Ticker = %s"%(i,Ticker))
+#                print("NO. %d, Ticker = %s"%(i,Ticker))
+                print(" %.2d "%i, sep=">", end = '')
             print("get_cons_maxUpOrDown ...... Done!")
+            print("\n")
         else:
             print("Wind Starting Error!")
 #        w.stop()
-    
+
+    def get_cons_turn(self, beginDate, endDate):
+        '''利用wind获得列表中每个股票在特定日期的换手率情况
+        Args:
+            self.consTicker: Series, 交易代码序列
+            self.tradeDate: str, 交易时间
+        Returns:
+            self.consTurn: dict, 交易代码对应是否涨跌停
+        '''
+#        w.start()
+        exchange = '.SH'
+        if(w.isconnected()):
+            length = len(self.consTicker)
+            for i in range(length):
+                Ticker = str(self.consTicker.values[i])
+                wind = w.wsd(Ticker + exchange, "turn", beginDate, endDate, usedf = True)
+                consTurn = wind[1]
+                self.consTurn[Ticker] = consTurn
+#                print("NO. %d, Ticker = %s"%(i,Ticker))
+                print(" %.2d "%i, sep=">", end = '')
+            print("get_cons_turn ...... Done!")
+            print("\n")
+        else:
+            print("Wind Starting Error!")
+#        w.stop()
+
+    def get_cons_swing(self, beginDate, endDate):
+        '''利用wind获得列表中每个股票在特定日期的振幅情况
+        Args:
+            self.consTicker: Series, 交易代码序列
+            self.tradeDate: str, 交易时间
+        Returns:
+            self.consSwing: dict, 交易代码对应是否涨跌停
+        '''
+#        w.start()
+        exchange = '.SH'
+        if(w.isconnected()):
+            length = len(self.consTicker)
+            for i in range(length):
+                Ticker = str(self.consTicker.values[i])
+                wind = w.wsd(Ticker + exchange, "turn", beginDate, endDate, usedf = True)
+                consSwing = wind[1]
+                self.consSwing[Ticker] = consSwing
+#                print("NO. %d, Ticker = %s"%(i,Ticker))
+                print(" %.2d "%i, sep=">", end = '')
+            print("get_cons_swing ...... Done!")
+            print("\n")
+        else:
+            print("Wind Starting Error!")
+#        w.stop()
+
+
 class ETF_decern(ETF_recognition):
     '''
     继承自ETF_recognition
@@ -94,12 +153,16 @@ class ETF_decern(ETF_recognition):
         
         self.consPrice = {}
         self.consMaxUpOrDown = {}
+        self.consTurn = {}
+        self.consSwing = {}
         
         self.get_consPrice(self.tradeDateList[0], self.tradeDateList[-1]) #重载初始化函数     
         self.get_cons_maxUpOrDown(self.tradeDateList[0], self.tradeDateList[-1]) #重载初始化函数
+        self.get_cons_turn(self.tradeDateList[0], self.tradeDateList[-1]) #重载初始化函数
+        self.get_cons_swing(self.tradeDateList[0], self.tradeDateList[-1]) #重载初始化函数
         
         
-
+# 还可以优化，把max turn 和 swing 三个放到一起。
 
 
 
